@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="home_page_linear_layout" type="id" />
+    <item name="attention_recycler" type="id" />
+    <item name="toolbar" type="id" />
+    <item name="recycler_home_left_image_filter_view" type="id" />
+</resources>

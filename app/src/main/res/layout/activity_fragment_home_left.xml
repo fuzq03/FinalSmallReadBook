@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.HomeLeftActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/home_left_imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/main_head_profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundPercent="1" />
+
+        <Button
+            android:id="@+id/back_to_home_activity"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/ic_baseline_close_24"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/home_left_imageView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="记录我的日常"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            app:layout_constraintStart_toEndOf="@+id/home_left_imageView"
+            app:layout_constraintTop_toTopOf="@id/home_left_imageView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="还没有记录"
+            android:textColor="#a1a1a1"
+            app:layout_constraintStart_toEndOf="@+id/home_left_imageView"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            tools:layout_editor_absoluteY="39dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/home_left_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/home_left_no_hide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#010101"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#010101"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/home_left_3"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/home_left_3"/>
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/home_left_1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/home_left_1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="#010101">
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/home_left_2"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/home_left_2"/>
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/home_left_5"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/home_left_5"/>
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/home_left_4"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/home_left_4"/>
+            </LinearLayout>
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="        听~有趣的声音"
+                android:textSize="15dp"
+                android:textColor="#cccccc"
+                android:gravity="center|left"
+                android:background="#010101"/>
+
+            <LinearLayout
+                android:id="@+id/home_left_listen"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:background="#010101"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/home_left_listen_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="#010101"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:background="#010101"
+                android:text="1111119999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999"
+                android:textColor="@color/white"
+                android:textSize="50dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_left_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#010101"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/home_left_hide_3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/home_left_hide_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/home_left_hide_1"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/home_left_hide_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_left_hide_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/home_left_hide_2"
+            app:layout_constraintStart_toEndOf="@id/home_left_hide_3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/home_left_hide_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_left_hide_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/home_left_hide_5"
+            app:layout_constraintStart_toEndOf="@id/home_left_hide_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/home_left_hide_5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_left_hide_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/home_left_hide_4"
+            app:layout_constraintStart_toEndOf="@id/home_left_hide_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/home_left_hide_4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_left_hide_4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/home_left_hide_5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="语音"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/home_left_hide_3"
+            app:layout_constraintTop_toBottomOf="@id/home_left_hide_1"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="日签"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/home_left_hide_1"
+            app:layout_constraintTop_toBottomOf="@id/home_left_hide_1"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="打卡"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/home_left_hide_2"
+            app:layout_constraintTop_toBottomOf="@id/home_left_hide_1"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="文字"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/home_left_hide_5"
+            app:layout_constraintTop_toBottomOf="@id/home_left_hide_1"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="拍摄"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/home_left_hide_4"
+            app:layout_constraintTop_toBottomOf="@id/home_left_hide_1"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
