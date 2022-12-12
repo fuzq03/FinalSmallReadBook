@@ -75,5 +75,6 @@ public class HomePageActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AddActivity.class);
         startActivity(intent);
         this.overridePendingTransition(R.anim.enteralpha, R.anim.exitalpha);
+        //this.overridePendingTransition(0, 0);
     }
 }

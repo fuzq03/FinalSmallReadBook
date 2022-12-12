@@ -23,8 +23,6 @@ public class AttentionAdapter extends RecyclerView.Adapter<AttentionAdapter.Atte
 
     @Override
     public void onBindViewHolder(@NonNull AttentionHolder holder, int position) {
-
-
         if(position == 3){
             holder.ContentImageView.setImageResource(R.drawable.attention_item_image);
             holder.textContent.setText("“我想要吃好吃的”");

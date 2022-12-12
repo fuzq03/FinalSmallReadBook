@@ -7,6 +7,7 @@
     tools:context=".ui.activity.AddActivity">
 
     <ImageView
+        android:id="@+id/add_picture"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/nav_add_background"/>
